@@ -1,0 +1,23 @@
+<html>
+
+<head>
+    <script>
+        function receiver(event) {
+            if (event.origin == 'http://dominioA') {
+                eval(event.data);
+            }
+        }
+        window.addEventListener('message', receiver, false);
+
+        function resize(altura) {
+            document.getElementById('iframe').height = altura;
+        }  
+    </script>
+</head>
+
+<body>
+    <iframe  src="https://horacioavendano.github.io/IframeMercadoLibre/index.html" id="iframe">
+    </iframe>
+</body>
+
+</html>
